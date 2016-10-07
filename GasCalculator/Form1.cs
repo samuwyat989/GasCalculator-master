@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+using System.Threading;
 
 namespace GasCalculator
 {
@@ -14,7 +16,7 @@ namespace GasCalculator
     {
         const double GAS_PRIEMIUM = 0.95;
         const double GAS_REGULAR = 0.75;
-        const double GAS_SUPER = 0.85;
+        const double GAS_MID = 0.85;
 
         public storeInterface()
         {
@@ -23,13 +25,14 @@ namespace GasCalculator
 
         private void costButton_Click(object sender, EventArgs e)
         {
-
+            Graphics gas = this.CreateGraphics();
+            gas.DrawImage(Properties.Resources.fuel_gauge, 50, 100);
         }
 
         private void storeInterface_Load(object sender, EventArgs e)
         {
             regularBox.Visible = false;
-            superBox.Visible = false;
+            midBox.Visible = false;
             premiumBox.Visible = false;
         }
 
@@ -43,14 +46,14 @@ namespace GasCalculator
             regularBox.Visible = false;
         }
 
-        private void super_MouseHover(object sender, EventArgs e)
+        private void mid_MouseHover(object sender, EventArgs e)
         {
-            superBox.Visible = true;
+            midBox.Visible = true;
         }
 
-        private void super_MouseLeave(object sender, EventArgs e)
+        private void mid_MouseLeave(object sender, EventArgs e)
         {
-            superBox.Visible = false;
+            midBox.Visible = false;
         }
 
         private void premium_MouseHover(object sender, EventArgs e)

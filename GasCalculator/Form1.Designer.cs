@@ -28,55 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tendered = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.costButton = new System.Windows.Forms.Button();
             this.regular = new System.Windows.Forms.Button();
-            this.super = new System.Windows.Forms.Button();
+            this.mid = new System.Windows.Forms.Button();
             this.premium = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.gasType = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.option1 = new System.Windows.Forms.Label();
+            this.option2 = new System.Windows.Forms.Label();
             this.regularBox = new System.Windows.Forms.TextBox();
             this.premiumBox = new System.Windows.Forms.TextBox();
-            this.superBox = new System.Windows.Forms.TextBox();
+            this.midBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.carType = new System.Windows.Forms.Label();
+            this.carPic = new System.Windows.Forms.Button();
+            this.vanPic = new System.Windows.Forms.Button();
+            this.truckPic = new System.Windows.Forms.Button();
+            this.pathType = new System.Windows.Forms.Label();
+            this.fuelNeeded = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.fuelAmount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // tendered
-            // 
-            this.tendered.Location = new System.Drawing.Point(15, 234);
-            this.tendered.Name = "tendered";
-            this.tendered.Size = new System.Drawing.Size(100, 20);
-            this.tendered.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(121, 181);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(15, 181);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(15, 208);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(121, 208);
+            this.costButton.Location = new System.Drawing.Point(222, 380);
             this.costButton.Name = "costButton";
             this.costButton.Size = new System.Drawing.Size(100, 23);
             this.costButton.TabIndex = 4;
@@ -86,31 +63,47 @@
             // 
             // regular
             // 
-            this.regular.Location = new System.Drawing.Point(15, 61);
+            this.regular.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.regular.FlatAppearance.BorderSize = 2;
+            this.regular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regular.ForeColor = System.Drawing.Color.White;
+            this.regular.Location = new System.Drawing.Point(8, 77);
             this.regular.Name = "regular";
-            this.regular.Size = new System.Drawing.Size(100, 23);
+            this.regular.Size = new System.Drawing.Size(257, 36);
             this.regular.TabIndex = 5;
             this.regular.Text = "Regular ";
             this.regular.UseVisualStyleBackColor = true;
             this.regular.MouseLeave += new System.EventHandler(this.regular_MouseLeave);
             this.regular.MouseHover += new System.EventHandler(this.regular_MouseHover);
             // 
-            // super
+            // mid
             // 
-            this.super.Location = new System.Drawing.Point(15, 90);
-            this.super.Name = "super";
-            this.super.Size = new System.Drawing.Size(100, 23);
-            this.super.TabIndex = 6;
-            this.super.Text = "Super";
-            this.super.UseVisualStyleBackColor = true;
-            this.super.MouseLeave += new System.EventHandler(this.super_MouseLeave);
-            this.super.MouseHover += new System.EventHandler(this.super_MouseHover);
+            this.mid.BackColor = System.Drawing.Color.RoyalBlue;
+            this.mid.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.mid.FlatAppearance.BorderSize = 2;
+            this.mid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mid.ForeColor = System.Drawing.Color.White;
+            this.mid.Location = new System.Drawing.Point(8, 119);
+            this.mid.Name = "mid";
+            this.mid.Size = new System.Drawing.Size(257, 36);
+            this.mid.TabIndex = 6;
+            this.mid.Text = "Mid - Grade";
+            this.mid.UseVisualStyleBackColor = false;
+            this.mid.MouseLeave += new System.EventHandler(this.mid_MouseLeave);
+            this.mid.MouseHover += new System.EventHandler(this.mid_MouseHover);
             // 
             // premium
             // 
-            this.premium.Location = new System.Drawing.Point(15, 119);
+            this.premium.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.premium.FlatAppearance.BorderSize = 2;
+            this.premium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.premium.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.premium.ForeColor = System.Drawing.Color.White;
+            this.premium.Location = new System.Drawing.Point(9, 161);
             this.premium.Name = "premium";
-            this.premium.Size = new System.Drawing.Size(100, 23);
+            this.premium.Size = new System.Drawing.Size(257, 36);
             this.premium.TabIndex = 7;
             this.premium.Text = "Premium";
             this.premium.UseVisualStyleBackColor = true;
@@ -120,51 +113,55 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(176, 9);
+            this.title.Font = new System.Drawing.Font("Courier New", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.White;
+            this.title.Location = new System.Drawing.Point(80, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(82, 13);
+            this.title.Size = new System.Drawing.Size(297, 37);
             this.title.TabIndex = 8;
             this.title.Text = "The Corner Gas";
             // 
             // gasType
             // 
             this.gasType.AutoSize = true;
-            this.gasType.Location = new System.Drawing.Point(12, 34);
+            this.gasType.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gasType.ForeColor = System.Drawing.Color.White;
+            this.gasType.Location = new System.Drawing.Point(5, 57);
             this.gasType.Name = "gasType";
-            this.gasType.Size = new System.Drawing.Size(103, 13);
+            this.gasType.Size = new System.Drawing.Size(260, 17);
             this.gasType.TabIndex = 9;
-            this.gasType.Text = "Select your gas type";
+            this.gasType.Text = "Step 1: Select your gas type";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(297, 34);
+            this.label3.Location = new System.Drawing.Point(213, 364);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "remember the nickle round";
             // 
-            // label4
+            // option1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(247, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Option 1 how full do you want your tank to be ";
+            this.option1.AutoSize = true;
+            this.option1.Location = new System.Drawing.Point(353, 246);
+            this.option1.Name = "option1";
+            this.option1.Size = new System.Drawing.Size(226, 13);
+            this.option1.TabIndex = 11;
+            this.option1.Text = "Option 1: How full do yo want your tank to be?";
             // 
-            // label5
+            // option2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(233, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(238, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Option 2 how much money do you want to spend";
+            this.option2.AutoSize = true;
+            this.option2.Location = new System.Drawing.Point(353, 327);
+            this.option2.Name = "option2";
+            this.option2.Size = new System.Drawing.Size(176, 13);
+            this.option2.TabIndex = 12;
+            this.option2.Text = "Option 2: How full will your tank be?";
             // 
             // regularBox
             // 
-            this.regularBox.Location = new System.Drawing.Point(75, 52);
+            this.regularBox.Location = new System.Drawing.Point(222, 87);
             this.regularBox.Name = "regularBox";
             this.regularBox.Size = new System.Drawing.Size(100, 20);
             this.regularBox.TabIndex = 13;
@@ -172,41 +169,129 @@
             // 
             // premiumBox
             // 
-            this.premiumBox.Location = new System.Drawing.Point(75, 104);
+            this.premiumBox.Location = new System.Drawing.Point(222, 171);
             this.premiumBox.Name = "premiumBox";
             this.premiumBox.Size = new System.Drawing.Size(100, 20);
             this.premiumBox.TabIndex = 14;
             this.premiumBox.Text = "$ 0.95 per liter";
             // 
-            // superBox
+            // midBox
             // 
-            this.superBox.Location = new System.Drawing.Point(75, 78);
-            this.superBox.Name = "superBox";
-            this.superBox.Size = new System.Drawing.Size(100, 20);
-            this.superBox.TabIndex = 15;
-            this.superBox.Text = "$ 0.85 per liter";
+            this.midBox.Location = new System.Drawing.Point(222, 129);
+            this.midBox.Name = "midBox";
+            this.midBox.Size = new System.Drawing.Size(100, 20);
+            this.midBox.TabIndex = 15;
+            this.midBox.Text = "$ 0.85 per liter";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(181, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 16;
+            // 
+            // carType
+            // 
+            this.carType.AutoSize = true;
+            this.carType.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carType.ForeColor = System.Drawing.Color.White;
+            this.carType.Location = new System.Drawing.Point(5, 208);
+            this.carType.Name = "carType";
+            this.carType.Size = new System.Drawing.Size(296, 17);
+            this.carType.TabIndex = 17;
+            this.carType.Text = "Step 2: Select your vehicel type";
+            // 
+            // carPic
+            // 
+            this.carPic.Location = new System.Drawing.Point(8, 228);
+            this.carPic.Name = "carPic";
+            this.carPic.Size = new System.Drawing.Size(98, 90);
+            this.carPic.TabIndex = 18;
+            this.carPic.Text = "car";
+            this.carPic.UseVisualStyleBackColor = true;
+            // 
+            // vanPic
+            // 
+            this.vanPic.Location = new System.Drawing.Point(216, 228);
+            this.vanPic.Name = "vanPic";
+            this.vanPic.Size = new System.Drawing.Size(98, 90);
+            this.vanPic.TabIndex = 19;
+            this.vanPic.Text = "Van";
+            this.vanPic.UseVisualStyleBackColor = true;
+            // 
+            // truckPic
+            // 
+            this.truckPic.Location = new System.Drawing.Point(112, 228);
+            this.truckPic.Name = "truckPic";
+            this.truckPic.Size = new System.Drawing.Size(98, 90);
+            this.truckPic.TabIndex = 20;
+            this.truckPic.Text = "Truck";
+            this.truckPic.UseVisualStyleBackColor = true;
+            // 
+            // pathType
+            // 
+            this.pathType.AutoSize = true;
+            this.pathType.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pathType.ForeColor = System.Drawing.Color.White;
+            this.pathType.Location = new System.Drawing.Point(353, 213);
+            this.pathType.Name = "pathType";
+            this.pathType.Size = new System.Drawing.Size(224, 17);
+            this.pathType.TabIndex = 21;
+            this.pathType.Text = "Step 4: Select your path";
+            // 
+            // fuelNeeded
+            // 
+            this.fuelNeeded.Location = new System.Drawing.Point(457, 284);
+            this.fuelNeeded.Name = "fuelNeeded";
+            this.fuelNeeded.Size = new System.Drawing.Size(100, 20);
+            this.fuelNeeded.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(355, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(278, 17);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Step 3: How full is your tank?";
+            // 
+            // fuelAmount
+            // 
+            this.fuelAmount.Location = new System.Drawing.Point(533, 116);
+            this.fuelAmount.Name = "fuelAmount";
+            this.fuelAmount.Size = new System.Drawing.Size(100, 20);
+            this.fuelAmount.TabIndex = 24;
             // 
             // storeInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 359);
-            this.Controls.Add(this.superBox);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(705, 445);
+            this.Controls.Add(this.fuelAmount);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.fuelNeeded);
+            this.Controls.Add(this.pathType);
+            this.Controls.Add(this.truckPic);
+            this.Controls.Add(this.vanPic);
+            this.Controls.Add(this.carPic);
+            this.Controls.Add(this.carType);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.midBox);
             this.Controls.Add(this.premiumBox);
             this.Controls.Add(this.regularBox);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.option2);
+            this.Controls.Add(this.option1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.gasType);
             this.Controls.Add(this.title);
             this.Controls.Add(this.premium);
-            this.Controls.Add(this.super);
+            this.Controls.Add(this.mid);
             this.Controls.Add(this.regular);
             this.Controls.Add(this.costButton);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.tendered);
             this.Name = "storeInterface";
             this.Text = "The Corner Gas";
             this.Load += new System.EventHandler(this.storeInterface_Load);
@@ -216,23 +301,27 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tendered;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button costButton;
         private System.Windows.Forms.Button regular;
-        private System.Windows.Forms.Button super;
+        private System.Windows.Forms.Button mid;
         private System.Windows.Forms.Button premium;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label gasType;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label option1;
+        private System.Windows.Forms.Label option2;
         private System.Windows.Forms.TextBox regularBox;
         private System.Windows.Forms.TextBox premiumBox;
-        private System.Windows.Forms.TextBox superBox;
+        private System.Windows.Forms.TextBox midBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label carType;
+        private System.Windows.Forms.Button carPic;
+        private System.Windows.Forms.Button vanPic;
+        private System.Windows.Forms.Button truckPic;
+        private System.Windows.Forms.Label pathType;
+        private System.Windows.Forms.TextBox fuelNeeded;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox fuelAmount;
     }
 }
 
