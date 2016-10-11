@@ -35,7 +35,6 @@
             this.regularBox = new System.Windows.Forms.TextBox();
             this.premiumBox = new System.Windows.Forms.TextBox();
             this.midBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.carType = new System.Windows.Forms.Label();
             this.pathType = new System.Windows.Forms.Label();
             this.fuelNeeded = new System.Windows.Forms.TextBox();
@@ -63,12 +62,13 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thisIsVersion10BySamWyattAsTheSecondSummativeInICS3UToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(240, 395);
+            this.costButton.Location = new System.Drawing.Point(308, 387);
             this.costButton.Name = "costButton";
             this.costButton.Size = new System.Drawing.Size(100, 23);
             this.costButton.TabIndex = 4;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(404, 405);
+            this.label3.Location = new System.Drawing.Point(339, 413);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 13);
             this.label3.TabIndex = 10;
@@ -130,14 +130,6 @@
             this.midBox.Size = new System.Drawing.Size(100, 20);
             this.midBox.TabIndex = 15;
             this.midBox.Text = "$ 0.946 per liter";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 134);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 16;
             // 
             // carType
             // 
@@ -196,9 +188,10 @@
             // outputLabel
             // 
             this.outputLabel.AutoSize = true;
+            this.outputLabel.BackColor = System.Drawing.Color.White;
             this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputLabel.ForeColor = System.Drawing.Color.White;
-            this.outputLabel.Location = new System.Drawing.Point(88, 355);
+            this.outputLabel.ForeColor = System.Drawing.Color.Navy;
+            this.outputLabel.Location = new System.Drawing.Point(38, 387);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(0, 13);
             this.outputLabel.TabIndex = 26;
@@ -314,7 +307,7 @@
             this.option1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.option1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.option1.ForeColor = System.Drawing.Color.White;
-            this.option1.Location = new System.Drawing.Point(373, 254);
+            this.option1.Location = new System.Drawing.Point(356, 254);
             this.option1.Name = "option1";
             this.option1.Size = new System.Drawing.Size(315, 19);
             this.option1.TabIndex = 33;
@@ -434,12 +427,23 @@
             this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.newToolStripMenuItem.Text = "New";
             // 
+            // printButton
+            // 
+            this.printButton.Location = new System.Drawing.Point(414, 387);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(100, 23);
+            this.printButton.TabIndex = 36;
+            this.printButton.Text = "Print Receipt";
+            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
+            // 
             // storeInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(705, 445);
+            this.Controls.Add(this.printButton);
             this.Controls.Add(this.option2);
             this.Controls.Add(this.option1);
             this.Controls.Add(this.carCheck);
@@ -455,7 +459,6 @@
             this.Controls.Add(this.fuelNeeded);
             this.Controls.Add(this.pathType);
             this.Controls.Add(this.carType);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.midBox);
             this.Controls.Add(this.premiumBox);
             this.Controls.Add(this.regularBox);
@@ -483,7 +486,6 @@
         private System.Windows.Forms.TextBox regularBox;
         private System.Windows.Forms.TextBox premiumBox;
         private System.Windows.Forms.TextBox midBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label carType;
         private System.Windows.Forms.Label pathType;
         private System.Windows.Forms.TextBox fuelNeeded;
@@ -511,6 +513,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thisIsVersion10BySamWyattAsTheSecondSummativeInICS3UToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.Button printButton;
     }
 }
 
