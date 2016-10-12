@@ -23,7 +23,9 @@ namespace GasCalculator
         string gasIn;
         string gasOut;
         string spend;
+        string tender;
         double message;
+        double change;
         
         public storeInterface()
         {
@@ -44,6 +46,18 @@ namespace GasCalculator
             gasIn = fuelAmount.Text;
             gasOut = fuelNeeded.Text;
             spend = moneyRequest.Text;
+            tender = tenderBox.Text;
+
+            Graphics box = this.CreateGraphics();
+            SolidBrush whiteBrush = new SolidBrush(Color.White);//loop potential
+            int loopNumber = 250;
+            int x8 = 1;
+            for (int x = 0; x < loopNumber; x++)
+            {
+                box.FillRectangle(whiteBrush, 30, 365, x8, 65);
+                Thread.Sleep(2);
+                x8++;
+            }
 
             try
             {
@@ -83,23 +97,21 @@ namespace GasCalculator
                 if (option1.Checked)  // Checks which option you chose
                 {
                     message = (Convert.ToDouble(gasOut) - Convert.ToDouble(gasIn)) * gasRate * vehicalType;
-                    outputLabel.Text = "The cost is " + message.ToString("C");
+                    change = Convert.ToDouble(tender) - ((Convert.ToDouble(gasOut) - Convert.ToDouble(gasIn)) * gasRate * vehicalType);
+
+                    outputLabel.Text = "The cost is: " + message.ToString("C") + "\nYour change is: " + change.ToString("C");                    
                 }
                 else
                 {
                     message = ((Convert.ToDouble(spend) / gasRate) + (Convert.ToDouble(gasIn) * vehicalType)) / vehicalType * 100; 
-                    outputLabel.Text = "Your tank is " + message.ToString(".##") + "% full.";
+                    outputLabel.Text = "Your tank is:" + message.ToString(".##") + "% full.";
                 }
                 
             }
             catch
             {
                 outputLabel.Text = "Please remember to fill all requirements. \nCheck the help section above if needed.";
-            }
-
-            Graphics box = this.CreateGraphics();
-            SolidBrush whiteBrush = new SolidBrush(Color.White);//loop potential
-            box.FillRectangle(whiteBrush, 30, 365, 250, 65);          
+            }                                       
                         
         }
                
@@ -112,7 +124,7 @@ namespace GasCalculator
 
             regularBox.Visible = false;
             midBox.Visible = false;
-            premiumBox.Visible = false;                             
+            premiumBox.Visible = false;            
         }
 
         private void regCheck_MouseHover(object sender, EventArgs e)
@@ -161,10 +173,46 @@ namespace GasCalculator
             SolidBrush textBrush = new SolidBrush(Color.Black);
             Font printFont = new Font("Courier New", 12);
 
+            string cost = "eveve";
+
             print.FillRectangle(whiteBrush, 735, 20, 225, 400);
             print.DrawString("THE GAS CORNER", printFont, textBrush, 765, 30);
             print.DrawString("SALES RECEIPT", printFont, textBrush, 765, 45);
+            print.DrawString(cost, printFont, textBrush, 765, 85);                                
+        }
 
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fuelAmount.Text = "";
+            fuelNeeded.Text = "";
+            tenderBox.Text = "";
+            moneyRequest.Text = "";
+            regCheck.Checked = false;
+            midCheck.Checked = false;
+            premCheck.Checked = false;
+            option1.Checked = false;
+            option2.Checked = false;
+            carCheck.Checked = false;
+            truckCheck.Checked = false;
+            miniCheck.Checked = false;
+            outputLabel.Text = "";
+            Graphics box = this.CreateGraphics();
+            SolidBrush navyBrush = new SolidBrush(Color.Navy);//loop potential
+            box.FillRectangle(navyBrush, 30, 365, 250, 65);
+
+                int loopNumber = 300;
+            int xr = 1021;
+            for (int x = 0; x < loopNumber; x++)
+            {
+                this.Size = new Size(xr, 484);
+                Thread.Sleep(1);
+                xr--;
+            }
+        }
+
+        private void option1_CheckStateChanged(object sender, EventArgs e)
+        {
+            //option2.Enabled = false;
         }
     }
 }

@@ -63,16 +63,17 @@
             this.thisIsVersion10BySamWyattAsTheSecondSummativeInICS3UToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printButton = new System.Windows.Forms.Button();
+            this.tenderBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // costButton
             // 
-            this.costButton.Location = new System.Drawing.Point(308, 387);
+            this.costButton.Location = new System.Drawing.Point(417, 387);
             this.costButton.Name = "costButton";
             this.costButton.Size = new System.Drawing.Size(100, 23);
             this.costButton.TabIndex = 4;
-            this.costButton.Text = "Show Bill";
+            this.costButton.Text = "Show Results";
             this.costButton.UseVisualStyleBackColor = true;
             this.costButton.Click += new System.EventHandler(this.costButton_Click);
             // 
@@ -313,6 +314,7 @@
             this.option1.TabIndex = 33;
             this.option1.Text = "Option 1: How full do yo want your tank to be?";
             this.option1.UseVisualStyleBackColor = true;
+            this.option1.CheckStateChanged += new System.EventHandler(this.option1_CheckStateChanged);
             // 
             // option2
             // 
@@ -426,10 +428,11 @@
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // printButton
             // 
-            this.printButton.Location = new System.Drawing.Point(414, 387);
+            this.printButton.Location = new System.Drawing.Point(311, 387);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(100, 23);
             this.printButton.TabIndex = 36;
@@ -437,12 +440,20 @@
             this.printButton.UseVisualStyleBackColor = true;
             this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
+            // tenderBox
+            // 
+            this.tenderBox.Location = new System.Drawing.Point(356, 279);
+            this.tenderBox.Name = "tenderBox";
+            this.tenderBox.Size = new System.Drawing.Size(100, 20);
+            this.tenderBox.TabIndex = 38;
+            // 
             // storeInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(705, 445);
+            this.Controls.Add(this.tenderBox);
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.option2);
             this.Controls.Add(this.option1);
@@ -514,6 +525,7 @@
         private System.Windows.Forms.ToolStripMenuItem thisIsVersion10BySamWyattAsTheSecondSummativeInICS3UToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.TextBox tenderBox;
     }
 }
 
